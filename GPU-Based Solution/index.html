@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Watershed Delineation using GPU</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="path.css"/>
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script src="lib/igloo-0.1.2.js"></script>
+    <script src="js/gpusolver.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+           var refreshButton = document.getElementById("refreshButton");
+
+            refreshButton.onclick = function() {
+                var canvas = document.getElementById("display");
+                canvas=null;
+                init();
+            }
+
+            var reloadButton = document.getElementById("reloadButton");
+
+            reloadButton.onclick = function() {
+                location.reload();
+            }
+        };
+    </script>
+
+  </head>
+  <body>
+    <h1>Watershed Delineation using GPU</h1>
+    <button type="button" id="refreshButton"> Run Again </button>
+    <button type="button" id="reloadButton"> Reload </button>
+    <h1><br></h1>
+    <canvas id="display"></canvas>
+  </body>
+</html>
