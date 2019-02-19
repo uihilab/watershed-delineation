@@ -210,7 +210,7 @@ func main() {
 	yy := int32(*y)
 
 	if hh {
-		fmt.Println("Usage: ./watershed\t[-h] [-i inputfile] [-o outputfile] [-t bin|png]\n\t\t\t\t[-z file|kml] [-x xvalue] [-y yvalue] [-r]\nOptions:\n-r\t\t\t: don't print outputs\n-h\t\t\t: help\n-i inputfile\t\t: indicate input file's path\n-o outputfile\t\t: indicate output file's path, default=ws.out\n-t bin|png\t\t: type of input, either bin or png, default=bin\n-z bin|kml\t\t: type of output, either kml or bin, defaul=kml\n-x xvalue\t\t: x value of the target point, should be integer\n-y yvalue\t\t: y value of the target point, should be integer\n")
+		fmt.Println("Usage: ./watershed\t[-h] [-i inputfile] [-o outputfile] [-t bin|png]\n\t\t\t\t[-z raw|kml] [-x xvalue] [-y yvalue] [-r]\nOptions:\n-r\t\t\t: don't print outputs\n-h\t\t\t: help\n-i inputfile\t\t: indicate input file's path\n-o outputfile\t\t: indicate output file's path, default=ws.out\n-t bin|png\t\t: type of input, either bin or png, default=bin\n-z raw|kml\t\t: type of output, either kml or raw, default=kml\n-x xvalue\t\t: x value of the target point, should be integer\n-y yvalue\t\t: y value of the target point, should be integer\n")
 		os.Exit(0)
 	}
 
@@ -219,8 +219,8 @@ func main() {
 		os.Exit(0)
 	}
 
-	if out_t != "file" && out_t != "kml" {
-		fmt.Println("Output type must be either file or kml.")
+	if out_t != "raw" && out_t != "kml" {
+		fmt.Println("Output type must be either raw or kml.")
 		os.Exit(0)
 	}
 
@@ -250,7 +250,7 @@ func main() {
 
 	str := ""
 
-	if out_t == "file" {
+	if out_t == "raw" {
 		for i := 0; i < len(border)/2; i++ {
 			lng := -96.9579313 + border[2*i]*dx
 			lat := 40.3024337946 + (3680-border[2*i+1])*dy
