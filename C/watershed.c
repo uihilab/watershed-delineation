@@ -212,7 +212,7 @@ main (int argc, char **argv)
         hflag = 1;
       	if (hflag)
 	  	{
-		   printf("""Usage: ./watershed\t[-h] [-i inputfile] [-o outputfile] [-t bin|png]\n\t\t\t\t[-z file|kml] [-x xvalue] [-y yvalue] [-r]\nOptions:\n-r\t\t\t: don't print outputs\n-h\t\t\t: help\n-i inputfile\t\t: indicate input file's path\n-o outputfile\t\t: indicate output file's path, default=ws.out\n-t bin|png\t\t: type of input, either bin or png, default=bin\n-z bin|kml\t\t: type of output, either kml or bin, defaul=kml\n-x xvalue\t\t: x value of the target point, should be integer\n-y yvalue\t\t: y value of the target point, should be integer\n""");
+		   printf("""Usage: ./watershed\t[-h] [-i inputfile] [-o outputfile] [-t bin|png]\n\t\t\t\t[-z raw|kml] [-x xvalue] [-y yvalue] [-r]\nOptions:\n-r\t\t\t: don't print outputs\n-h\t\t\t: help\n-i inputfile\t\t: indicate input file's path\n-o outputfile\t\t: indicate output file's path, default=ws.out\n-t bin|png\t\t: type of input, either bin or png, default=bin\n-z raw|kml\t\t: type of output, either kml or raw, default=kml\n-x xvalue\t\t: x value of the target point, should be integer\n-y yvalue\t\t: y value of the target point, should be integer\n""");
 		   return 0;
 	  	}
 
@@ -246,7 +246,7 @@ main (int argc, char **argv)
         break;
       case 'z':
         zvalue = optarg;
-        if (strcmp(zvalue, "kml")!=0 && strcmp(zvalue, "file")!=0)
+        if (strcmp(zvalue, "kml")!=0 && strcmp(zvalue, "raw")!=0)
         {
           printf("Unknown output type.\n");
           abort();
@@ -399,7 +399,7 @@ main (int argc, char **argv)
 	 
 	   fprintf(filekml, "</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark></Document></kml>");
 	   fclose (filekml);
-   } else if (strcmp(zvalue, "file")==0)
+   } else if (strcmp(zvalue, "raw")==0)
    {
    	   // write to coordinate pair file
    	   FILE * fileout;
