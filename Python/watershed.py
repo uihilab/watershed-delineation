@@ -15,7 +15,7 @@ dir_arr[7] = [-1,-1]
 dir_arr[8] = [0,-1]
 dir_arr[9] = [1,-1]
 
-def find_watershed(x, y, watershed_image_data):
+def find_watershed(x, y, direction_matrix):
 	global lenx
 	if typex == 500:
 		w = 1741
@@ -58,7 +58,7 @@ def find_watershed(x, y, watershed_image_data):
 				nx = arx + dirf[j]
 				ny = ary + dirg[j]
 				ind = ny*w+nx
-				if watershed_image_data[ind] == e[j]:		
+				if direction_matrix[ind] == e[j]:		
 					process[c]=nx
 					c+=1
 					process[c]=ny
