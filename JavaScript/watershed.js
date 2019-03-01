@@ -309,4 +309,10 @@ Options:
 
 }
 
-main()
+module.exports = {
+	"instant_watershed": instant_watershed
+}
+
+if (require.main === module) {
+    main()
+}
