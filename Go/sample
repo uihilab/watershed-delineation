@@ -1,0 +1,11 @@
+package main
+
+import (
+	"github.com/Iowa-Flood-Center/watershed-delineation/Go/watershed"
+)
+
+func main() {
+	data := watershed.LoadImage("direction90m.png")
+	border := watershed.FindWatershed(4777, 897, data)
+	watershed.SaveKML(border, "ws.kml")
+}
