@@ -1,15 +1,15 @@
 ## Watershed.go
 
 ### Usage
-First compile the script using `go build watershed.go`.
+First compile the script using `go build watershed.go`. Then the the command-line interface could be used as follows,
 ```
 Usage: ./watershed 	[-h] [-i inputfile] [-o outputfile] [-t bin|png]
 				[-z raw|kml] [-x xvalue] [-y yvalue] [-r]
 Options:
--r	 			: don't print outputs
--h 				: help
--i inputfile	: indicate input file's path
--o outputfile	: indicate output file's path, default=ws.out
+-r	 		: don't print outputs
+-h 			: help
+-i inputfile	 : indicate input file's path
+-o outputfile	  : indicate output file's path, default=ws.out
 -t bin|png 		: type of input, either bin or png, default=bin
 -z raw|kml 		: type of output, either kml or raw, default=kml
 -x xvalue		: x value of the target point, should be integer
