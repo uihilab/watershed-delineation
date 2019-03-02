@@ -1,6 +1,7 @@
-## Watershed.py
+## Watershed.go
 
 ### Usage
+First compile the script using `go build watershed.go`.
 ```
 Usage: ./watershed 	[-h] [-i inputfile] [-o outputfile] [-t bin|png]
 				[-z raw|kml] [-x xvalue] [-y yvalue] [-r]
