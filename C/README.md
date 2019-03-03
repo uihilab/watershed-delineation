@@ -4,7 +4,7 @@
 First compile the script using `gcc watershed.c -o watershed -lpng`. Then the the command-line interface could be used as follows,
 ```
 Usage: ./watershed 	[-h] [-i inputfile] [-o outputfile] [-t bin|png]
-				[-z raw|kml] [-x xvalue] [-y yvalue] [-r]
+			[-z raw|kml] [-x xvalue] [-y yvalue] [-r]
 Options:
 -r	 		: don't print outputs
 -h 			: help
