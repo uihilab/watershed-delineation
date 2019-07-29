@@ -1,2 +1,2 @@
-# watershed-delineation
-Client-side and Server-side Watershed Delineation Implementations
+# Watershed Delineation Libraries
+Client-side and Server-side Watershed Delineation Algorithm Implementations
