@@ -1,5 +1,5 @@
 # Watershed Delineation Libraries
-Client-side and Server-side Watershed Delineation Algorithm Implementations
+This repository covers client-side and server-side watershed delineation algorithm implementations. Usage instructions for individual implementations can be found at their directories.
 
 ## Feedback
 Feel free to send us feedback by filing an issue.
