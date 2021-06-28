@@ -15,4 +15,4 @@ This project is developed by the University of Iowa Hydroinformatics Lab (UIHI L
 ## References
 * Demir, I. and Szczepanek, R., 2017. Optimization of river network representation data models for web‐based systems. Earth and Space Science, 4(6), pp.336-347.
 
-* Sit, M., Sermet, Y. and Demir, I., 2019. Optimized watershed delineation library for server-side and client-side web applications. Open Geospatial Data, Software and Standards.
+* Sit, M., Sermet, Y., & Demir, I. (2019). Optimized watershed delineation library for server-side and client-side web applications. Open Geospatial Data, Software and Standards, 4(1), 1-10.
